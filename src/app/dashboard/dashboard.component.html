@@ -1,0 +1,26 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+</div>
+<div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div routerLink="total-users" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Total Users" count="200"></app-card>
+    </div>
+    <div routerLink="total-income" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Total Income" count="400000"></app-card>
+    </div>
+    <div routerLink="inactive-users" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Inactive Users" count="3"></app-card>
+    </div>
+    <div routerLink="active-users" class="col-xl-3 col-md-6 mb-4">
+        <app-card title="Active Users" count="193"></app-card>
+    </div>
+</div>
+
+
+<div class="row">
+    <router-outlet></router-outlet>
+</div>
