@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "cc202063-e8f3-4a21-9f01-8a71ff33d391"
+    "analytics": "4a337383-b140-4f56-ad53-490697f8015a"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "student": {
+    "demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/student",
+            "outputPath": "dist/demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +31,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/sb-admin-2.min.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css"
+              "src/assets/css/sb-admin-2.min.css"
             ],
             "scripts": []
           },
@@ -48,7 +46,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "7kb"
+                  "maximumError": "4kb"
                 }
               ],
               "fileReplacements": [
@@ -74,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "student:build:production"
+              "browserTarget": "demo:build:production"
             },
             "development": {
-              "browserTarget": "student:build:development"
+              "browserTarget": "demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "student:build"
+            "browserTarget": "demo:build"
           }
         },
         "test": {
@@ -108,5 +106,5 @@
       }
     }
   },
-  "defaultProject": "student"
+  "defaultProject": "demo"
 }
